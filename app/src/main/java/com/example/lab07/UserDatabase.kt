@@ -7,3 +7,9 @@ import androidx.room.RoomDatabase
 abstract class UserDatabase: RoomDatabase() {
     abstract fun userDao(): UserDao
 }
+
+@Database(entities = [User::class, MenuItem::class], version = 1)
+abstract class AppDatabase : RoomDatabase() {
+    abstract fun userDao(): UserDao
+    abstract fun menuDao(): MenuDao
+}

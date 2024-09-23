@@ -17,8 +17,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             Lab07Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    // Reemplazamos la función Greeting con ScreenUser
-                    ScreenUser(modifier = Modifier.padding(innerPadding))
+                    // Mostrar MenuScreen en vez de ScreenUser
+                    MenuScreen(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
