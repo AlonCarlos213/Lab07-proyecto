@@ -49,6 +49,11 @@ android {
         }
     }
 }
+kapt {
+    arguments {
+        arg("room.schemaLocation", "$projectDir/schemas")
+    }
+}
 
 val room_version = "2.6.1"
 
@@ -68,6 +73,10 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    implementation("androidx.compose.material3:material3:1.1.0")
+    implementation("androidx.compose.material:material-icons-core:1.4.0")
+    implementation("androidx.compose.material:material-icons-extended:1.4.0")
+
 
     // Dependencias de Room
     implementation("androidx.room:room-runtime:$room_version")
